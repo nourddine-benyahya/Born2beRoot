@@ -61,3 +61,38 @@ As a Mac user you have two superb choices available for running virtual machines
 
 Operating System basically its manages all the resources of the computer we can say acts as an interface between the software and different parts of the computer or the computer hardware.
 
+## What is a distribution
+
+A Linux distribution, is an operating system compiled from components developed by various open source projects and programmers. Each distribution includes the Linux kernel (the foundation of the operating system), the GNU shell utilities (the terminal interface and commands), the X server (for a graphical desktop), the desktop environment, a package management system, an installer and other services.
+
+
+### Debian
+
+Debian also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project. The Debian Stable branch is the most popular edition for personal computers and servers. Debian is also the basis for many other distributions, most notably Ubuntu, Pardus, Linux Mint.
+
+Debian is one of the oldest operating systems based on the Linux kernel
+
+### Rocky Linux
+
+Rocky Linux was founded by one of the co-founders of CentOS, after Red Hat discontinued CentOS.
+
+Rocky represents what CentOS used to be when it was established - a downstream distribution of Red Hat Enterprise Linux, stable, completely compatible with RHEL, and it is ideal for servers. Kurtzer took the RHEL open-source code and, using his background in high-performance scientific computing, created Rocky Linux as a CentOS doppelganger - but completely free.
+
+### Differences between Rocky Linux and Debian
+
+| **Aspect**              | **Rocky Linux**                                 | **Debian**                                      |
+|-------------------------|-------------------------------------------------|-------------------------------------------------|
+| **Origin**              | Fork of RHEL (Red Hat Enterprise Linux)        | Independent, community-driven                    |
+| **Stability**           | Stable, focused on enterprise environments     | Stable, well-established, widely used           |
+| **Release Cycle**       | Regular releases based on RHEL                  | Regular releases with well-defined schedules    |
+| **Package Management**  | **YUM/DNF:** Package manager for RPM packages  | **APT:** Advanced Package Tool for DEB packages |
+| **Init System**         | **Systemd:** Modern init and system management  | **SysVinit:** Traditional UNIX init system       |
+| **Default Desktop**     | Minimal installation, no default desktop        | Minimal installation, various desktop options    |
+| **Security**            | SELinux available, enabled by default            | AppArmor available; security emphasis            |
+| **Community Support**   | Growing community support due to CentOS shift   | Long-standing, large, diverse community          |
+| **Documentation**       | Documentation available, improving over time    | Extensive and mature documentation               |
+| **Use Cases**           | Server deployments, enterprise environments     | General-purpose, server, and desktop usage       |
+| **Commercial Support**  | Community-driven, with potential commercial use | Limited commercial support available             |
+| **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
+
+
