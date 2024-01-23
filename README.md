@@ -95,4 +95,25 @@ Rocky represents what CentOS used to be when it was established - a downstream d
 | **Commercial Support**  | Community-driven, with potential commercial use | Limited commercial support available             |
 | **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
 
+#script
 
+The architecture of your operating system and its kernel version.
+```
+uname -a | awk 'printf "#Architecture %s/n", $0'
+```
+• The number of physical processors.
+```
+lscpu | grep '^CPU(s) :' | awk '{printf "#CPU physical : %d\n", $2}'
+```
+• The number of virtual processors.
+```
+nproc | awk '{printf "vCPU : %d\n", $0}'
+```
+• The current available RAM on your server and its utilization rate as a percentage.
+```
+free -m | grep Mem: | awk '{printf "#Memory Usage: %d/%dMB (%.1f%%)\n", $3, $2, ($3/$2)*100}'
+```
+• The current available memory on your server and its utilization rate as a percentage.
+```
+df -m --total | grep 'total' | awk '{printf "#Disk Usage: %d/%dGb (%.1f%%)\n", $3, $4/1024, ($3/$4)*100}'
+```
