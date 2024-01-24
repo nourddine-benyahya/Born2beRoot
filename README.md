@@ -117,3 +117,7 @@ free -m | grep Mem: | awk '{printf "#Memory Usage: %d/%dMB (%.1f%%)\n", $3, $2, 
 ```
 df -m --total | grep 'total' | awk '{printf "#Disk Usage: %d/%dGb (%.1f%%)\n", $3, $4/1024, ($3/$4)*100}'
 ```
+• The current utilization rate of your processors as a percentage.
+```
+mpstat | tail -n 1 | awk '{printf "#CPU load: %.1f%%\n", 100 - $13}'
+```
