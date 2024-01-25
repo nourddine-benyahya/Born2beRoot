@@ -142,3 +142,21 @@ ip link show | grep link/ether | awk '{print $2}'
 ```
 cat /var/log/sudo/sudo.log | grep 'COMMAND' | wc -l | awk '{print "#Sudo : " ($1) " cmd"}'
 ```
+# Script using wall
+```
+#!/bin/bash
+
+wall <<EOF
+#Architecture 	 : $(uname -a | sed 's/ PREEMPT_DYNAMIC//')
+#CPU physical 	 : $(lscpu | grep '^CPU(s):' | awk '{print $2}')
+#vCPU		 : $(nproc)
+#Memory Usage	 : $(free -m | grep Mem: | awk '{printf "%d/%dMB (%.1f%%)\n", $3, $2, ($3/$2)*100}')
+#Disk Usage	 : $(df -m --total | grep 'total' | awk '{printf "%d/%dGb (%.1f%%)\n", $3, $4/1024, ($3/$4)*100}')
+#CPU load 	 : $(mpstat | tail -n 1 | awk '{printf "%.1f%%\n", 100 - $13}')
+#LVM use 	 : $(lsblk | grep ' lvm ' | tail -n -1 | awk '{printf "%s\n", ($0 ? "yes" : "no")}')
+#Connections TCP : $(netstat -at | grep ESTABLISHED | wc -l) ESTABLISHED
+#User log	 : $(who | awk '{print $1}' | sort -u | wc -l)
+#Network	 : IP $(hostname -I) ($(ip link show | grep link/ether | awk '{print $2}'))
+#Sudo		 : $(cat /var/log/sudo/sudo.log | grep 'COMMAND' | wc -l) cmd
+EOF
+```
