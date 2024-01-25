@@ -133,3 +133,8 @@ netstat -at | grep ESTABLISHED | wc -l | awk '{print "#Connections TCP : " $1 " 
 ```
 who | awk '{print $1}' | sort -u | wc -l
 ```
+• The IPv4 address of your server and its MAC (Media Access Control) address.
+```
+hostname -i
+ip link show | grep link/ether | awk '{print $2}'
+```
