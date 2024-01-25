@@ -107,7 +107,7 @@ lscpu | grep '^CPU(s) :' | awk '{printf "#CPU physical : %d\n", $2}'
 ```
 • The number of virtual processors.
 ```
-nproc | awk '{printf "vCPU : %d\n", $0}'
+nproc | awk '{printf "#vCPU : %d\n", $0}'
 ```
 • The current available RAM on your server and its utilization rate as a percentage.
 ```
@@ -125,4 +125,11 @@ mpstat | tail -n 1 | awk '{printf "#CPU load: %.1f%%\n", 100 - $13}'
 ```
 lsblk | grep ' lvm ' | tail -n -1 | awk '{printf "#LVM use :"; if ($0) print "yes"; else print "no"}'
 ```
-
+• The number of active connections.
+```
+netstat -at | grep ESTABLISHED | wc -l | awk '{print "#Connections TCP : " $1 " ESTABLISHED"}'
+```
+• The number of users using the server.
+```
+who | awk '{print $1}' | sort -u | wc -l
+```
