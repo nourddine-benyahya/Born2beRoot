@@ -121,3 +121,8 @@ df -m --total | grep 'total' | awk '{printf "#Disk Usage: %d/%dGb (%.1f%%)\n", $
 ```
 mpstat | tail -n 1 | awk '{printf "#CPU load: %.1f%%\n", 100 - $13}'
 ```
+• Whether LVM is active or not.
+```
+lsblk | grep ' lvm ' | tail -n -1 | awk '{printf "#LVM use :"; if ($0) print "yes"; else print "no"}'
+```
+
