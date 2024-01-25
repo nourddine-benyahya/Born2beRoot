@@ -138,3 +138,7 @@ who | awk '{print $1}' | sort -u | wc -l
 hostname -i
 ip link show | grep link/ether | awk '{print $2}'
 ```
+• The number of commands executed with the sudo program.
+```
+cat /var/log/sudo/sudo.log | grep 'COMMAND' | wc -l | awk '{print "#Sudo : " ($1) " cmd"}'
+```
