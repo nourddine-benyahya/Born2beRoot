@@ -95,6 +95,10 @@ Rocky represents what CentOS used to be when it was established - a downstream d
 | **Commercial Support**  | Community-driven, with potential commercial use | Limited commercial support available             |
 | **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
 
+
+##TCP VS UDP
+  https://youtu.be/uwoD5YsGACg?si=hjAu8NIE-CByzmjJ
+
 #script
 
 The architecture of your operating system and its kernel version.
