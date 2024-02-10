@@ -95,11 +95,20 @@ Rocky represents what CentOS used to be when it was established - a downstream d
 | **Commercial Support**  | Community-driven, with potential commercial use | Limited commercial support available             |
 | **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
 
+## UFW
 
-##TCP VS UDP
+Uncomplicated Firewall (UFW) is a program for managing a netfilter firewall designed to be easy to use.its uses iptables for configuration.
+
+### netfilter 
+Netfilter is a framework provided by the Linux kernel that allows various networking-related operations to be implemented in the form of customized handlers. Netfilter offers various functions and operations for packet filtering, network address translation, and port translation, which provide the functionality required for directing packets through a network and prohibiting packets from reaching sensitive locations within a network
+
+### iptable
+iptables is a user-space utility program that allows a system administrator to configure the IP packet filter rules of the Linux kernel firewall, implemented as different Netfilter modules. The filters are organized in different tables, which contain chains of rules for how to treat network traffic packets. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.
+
+## TCP VS UDP
   https://youtu.be/uwoD5YsGACg?si=hjAu8NIE-CByzmjJ
 
-#script
+# script
 
 The architecture of your operating system and its kernel version.
 ```
