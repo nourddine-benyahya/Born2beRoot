@@ -95,6 +95,9 @@ Rocky represents what CentOS used to be when it was established - a downstream d
 | **Commercial Support**  | Community-driven, with potential commercial use | Limited commercial support available             |
 | **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
 
+## booting process
+https://www.thegeekstuff.com/2011/02/linux-boot-process/
+
 ## UFW
 
 Uncomplicated Firewall (UFW) is a program for managing a netfilter firewall designed to be easy to use.its uses iptables for configuration.
