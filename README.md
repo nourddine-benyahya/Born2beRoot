@@ -96,7 +96,14 @@ Rocky represents what CentOS used to be when it was established - a downstream d
 | **Licensing**           | Open Source (GNU GPL and other licenses)        | Free Software (Debian Free Software Guidelines)  |
 
 ## booting process
+
 https://www.thegeekstuff.com/2011/02/linux-boot-process/
+
+## LVM
+
+### BASIC COMMANDS FOR LVM 
+
+https://www.learnlinux.tv/linux-logical-volume-manager-lvm-deep-dive-tutorial/
 
 ## UFW
 
